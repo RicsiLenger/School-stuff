@@ -1,6 +1,4 @@
-% newt.m
-
-function x_star = newt(f, x0, n)
+function x = newt(f, x0, n)
     % Bemenő paraméterek:
     % f - a függvény, karakterlánc formában
     % x0 - a kezdeti érték
@@ -20,8 +18,8 @@ function x_star = newt(f, x0, n)
 
         % Ha a változás kicsi, vagy a gyök már közelítődik, akkor kilépünk
         if abs(fk) < eps
-            x_star = x0;
-            fprintf('A gyök közelítése: x* = %f\n', x_star);
+            x = x0;
+            fprintf('A gyök közelítése: x* = %f\n', x);
             return;
         end
     end
